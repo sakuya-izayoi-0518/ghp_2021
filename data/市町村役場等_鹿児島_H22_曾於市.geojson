@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "市町村役場等及び公的集会施設_鹿児島_H22_曾於市",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::6668" } },
+"features": [
+{ "type": "Feature", "properties": { "P05_001": "46203", "P05_002": "2", "P05_003": "輝北総合支所", "P05_004": "輝北町上百引3914" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.863999, 31.547321 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46203", "P05_002": "2", "P05_003": "市成出張所", "P05_004": "輝北町市成1120-1" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.85697, 31.589616 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46214", "P05_002": "2", "P05_003": "牛根支所", "P05_004": "二川553-1" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.784509, 31.58232 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46217", "P05_002": "1", "P05_003": "曽於市役所", "P05_004": "末吉町二之方１９８０" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 131.019255, 31.653622 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46217", "P05_002": "2", "P05_003": "大隅支所", "P05_004": "大隅町岩川5629" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.994297, 31.596644 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46217", "P05_002": "2", "P05_003": "財部支所", "P05_004": "財部町南俣11275" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.993404, 31.726107 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46218", "P05_002": "1", "P05_003": "霧島市役所", "P05_004": "国分中央３－４５－１" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.763136, 31.741015 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46218", "P05_002": "2", "P05_003": "霧島総合支所", "P05_004": "霧島田口8-4" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.834518, 31.819729 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46218", "P05_002": "2", "P05_003": "福山総合支所", "P05_004": "福山町福山2466" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.81896, 31.673595 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46218", "P05_002": "2", "P05_003": "牧之原支所", "P05_004": "福山町福山5290-61" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.852561, 31.670641 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46218", "P05_002": "3", "P05_003": "市民サービスセンター「コア(ＣＯＲＥ)・よか」", "P05_004": "国分中央3-9-20" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.766453, 31.738885 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46221", "P05_002": "2", "P05_003": "松山支所", "P05_004": "松山町新橋268" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 131.04105, 31.57697 ] ] } },
+{ "type": "Feature", "properties": { "P05_001": "46468", "P05_002": "2", "P05_003": "野方支所", "P05_004": "野方6122-1" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 130.948951, 31.510653 ] ] } }
+]
+}

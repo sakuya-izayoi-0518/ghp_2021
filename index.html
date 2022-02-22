@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="P県 観光マップ 災害時避難マップ">
+    <title>P県インフォメーション</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- 2022/2/16 ルート追加 -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <!-- ルート追加 -->    
+    <script type="text/javascript" src="js/script.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">観光マップ</h1>
+        <!-- 2022/2/16 ルート追加 -->
+        <input type="button" value="ルート検索" onclick="search_route();">
+        <input type="button" value="ルート終了" onclick="end_route();">
+        <!-- ルート追加 -->        
+        <!-- <button id="openModal">Open modal</button> -->
+    </header>
+
+    <div id="map"></div>
+
+    <ul class="bottom-menu" id="bottom-menu">
+        <li class="menu">
+            <a href="#" id="openModal">
+                <i class="fas fa-info-circle"></i><br>
+                <span class="mini-text menu-notice">使い方</span>
+            </a>
+        </li>
+    
+        <li class="menu">
+            <!-- 2022/2/20 add 観光マップ -->
+            <!--            <a href="#"> -->
+            <a href="javascript:void(0);" onclick="clickKankoMap();">
+            <!-- add end -->
+                <i class="fas fa-map-marked-alt"></i><br>
+                <span class="mini-text menu-map">観光マップ</span>
+            </a>
+        </li>
+    
+        <li class="menu">
+            <a href="#">
+                <i class="fas fa-map-pin"></i><br>
+                <span class="mini-text menu-list">経路検索</span>
+            </a>
+        </li>
+    
+        <li class="menu">
+            <a href="javascript:void(0);" onclick="clickSetting();">
+                <img id="map-change-icon" src="./data/避難所.svg" style="margin-bottom: 8px; background-color: white;" width="30" height="30"><br>
+                <span class="mini-text menu-setting" id="map-change">避難マップ</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- モーダルエリアここから -->
+    <section id="modalArea" class="modalArea">
+        <div id="modalBg" class="modalBg"></div>
+        <div class="modalWrapper">
+            <div class="modalContents">
+                <h1>ルート検索の使い方</h1>
+                <p>地図上をクリックすると「スタート」地点が設定されます。</p>
+                <p>もう一度、地図上をクリックすると「目的地」地点が設定されます。</p>
+                <p>「ルート検索」をクリックすると、「スタート」から「目的地」までのルートが表示されます。</p>
+            </div>
+            <div id="closeModal" class="closeModal">
+            ×
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(function () {
+            $('#openModal').click(function(){
+                $('#modalArea').fadeIn();
+            });
+            $('#closeModal , #modalBg').click(function(){
+                $('#modalArea').fadeOut();
+            });
+        });
+    </script>
+    
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <!-- 2022/2/16 ルート追加 -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <!-- ルート追加 -->
+    
+    <!-- 2022/2/20 add 観光マップ -->
+    <script src="https://unpkg.com/proj4"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+    <!-- add end -->
+</body>
+</html>
